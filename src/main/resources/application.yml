@@ -1,0 +1,24 @@
+server:
+  port: 9090
+
+spring:
+  rabbitmq:
+    host: 188.131.147.130
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      concurrency: 10
+      max-concurrency: 20
+      prefetch: 50
+
+
+imps:
+  record:
+    exchange:
+      name: record:exchange
+    order:
+      key:
+        name: record:order:key
+      queue:
+        name: record:order:queue
